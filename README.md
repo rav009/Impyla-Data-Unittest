@@ -11,3 +11,4 @@ pip install impyla==0.14.2.2
 
 pip install html-testRunner
 
+pip install thrift-sasl==0.3.0
