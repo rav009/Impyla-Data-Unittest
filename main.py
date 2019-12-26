@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
     ifChinese = True
     if ifChinese:
-        print u"测试完毕, 将测试报告汉化."
+        print "测试完毕, 将测试报告汉化."
         testcasemap = {
             "TableTestCase.TableTestCase": "基类表测试",
             "DimTables.CustomerTestCase.CustomerTestCase": "Customer维度表测试",
@@ -93,4 +93,4 @@ if __name__ == '__main__':
         with open(fp, 'w') as f:
             f.write(s)
 
-        print u"汉化完毕."
+        print "汉化完毕."
