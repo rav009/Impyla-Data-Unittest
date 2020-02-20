@@ -49,6 +49,11 @@ class TableTestCase(unittest.TestCase):
         cs = self.icon.cursor()
         try:
             cs.execute("INVALIDATE METADATA %s" % self.tbName)
+            if self.tbName2 and self.tbName2 != '':
+                # some unrefreshed table of impala will cause encoding error
+                cs.execute("INVALIDATE METADATA %s" % self.tbName2)
+            except AttributeError as err:
+                pass
         finally:
             cs.close()
 
